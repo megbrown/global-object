@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-const nodeVersion = process.version;
-const v8Version = process.version.v8;
+const versions = {
+	nodeVersion: process.version,
+	v8Version: process.versions.v8
+};
 
-console.log(`Node.js version: ${nodeVersion}\nV8 version: ${process.versions.v8}`);
+const { nodeVersion, v8Version } = versions;
+
+console.log(`Node.js version: ${nodeVersion}\nV8 version: ${v8Version}`);
